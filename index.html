@@ -21,16 +21,35 @@
         function getComputerChoice(arr){
             randomChoice = Math.floor(Math.random()* arr.length)
             //Return the value of variable 
-            computer =  arr[randomChoice]
+            let computer =  arr[randomChoice]
             return computer
             
         }
 
-
-
-
-
+        //Function for getHumanChoice
+        function getHumanChoice(){
+            // Set a condition for while loop
+            condition = 1
+            //Use while loop to check input by user
+            while (condition === 1){
+                //Prompt user for an input for either rock,paper or scissors in a while loop
+                let choice = prompt("Please enter either 'rock'. 'paper, 'scissors'! ")
+                //Check wether user input the valid choice
+                if (choice === "rock" || choice === "paper" || choice === "scissors" ){
+                    //Return the valid choice if the user input is correct.
+                    let human = choice
+                    return human
+                    //Stop the while loop
+                    condition = 0
+                }
+                //Tell the user to enter a valid input and repeat the while loop
+                else {
+                    alert("Please enter a valid input!")
+                }
+            }
+        }
         console.log(getComputerChoice(choices))
+        console.log(getHumanChoice())
 
 
     </script>
