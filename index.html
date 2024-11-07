@@ -26,9 +26,7 @@
         function getComputerChoice(){
             randomChoice = Math.floor(Math.random()* choices.length)
             //Return the value of variable 
-            let computer =  choices[randomChoice]
-            return computer
-            
+            return choices[randomChoice]
         }
 
         //Function for getHumanChoice
@@ -43,8 +41,7 @@
                 //Check wether user input the valid choice
                 if (lowerCaseChoice === "rock" || lowerCaseChoice === "paper" || lowerCaseChoice === "scissors" ){
                     //Return the valid choice if the user input is correct.
-                    let human = lowerCaseChoice
-                    return human
+                    return lowerCaseChoice
                     //Stop the while loop
                     condition = 0
                 }
@@ -70,6 +67,7 @@
         const humanSelection = getHumanChoice()
         const computerSelection = getComputerChoice()
 
+        console.log (humanSelection,computerSelection)
     </script>
 </body>
 </html>
