@@ -23,10 +23,10 @@
 
 
         //Use random methods to pick a variable
-        function getComputerChoice(arr){
-            randomChoice = Math.floor(Math.random()* arr.length)
+        function getComputerChoice(){
+            randomChoice = Math.floor(Math.random()* choices.length)
             //Return the value of variable 
-            let computer =  arr[randomChoice]
+            let computer =  choices[randomChoice]
             return computer
             
         }
@@ -55,13 +55,20 @@
             }
         }
 
-        //Function for playRound
-        //Call Function of getComputerChoice & getHumanChoice
-        //
+        //Function for playRound & include two parameters (humanChoice,computerChoice)
+        //function playRound(humanChoice,computerChoice){
+        //Call Function getHumanChoice = humanChoice parameter, getComputerChoice = computerChoice parameters
+        //humanChoice = 
+        //Write conditional statements for requirements of winning
+        //display win or lose messages base on the conditional statements
+        //increment the score by one and store it
 
-        console.log(getComputerChoice(choices))
-        console.log(getHumanChoice())
 
+        //}
+       
+        //Create variables to assign getHumanChoice & getComputerChoice value to it
+        const humanSelection = getHumanChoice()
+        const computerSelection = getComputerChoice()
 
     </script>
 </body>
