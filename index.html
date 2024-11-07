@@ -39,10 +39,11 @@
             while (condition === 1){
                 //Prompt user for an input for either rock,paper or scissors in a while loop
                 let choice = prompt("Please enter either 'rock'. 'paper, 'scissors'! ")
+                let lowerCaseChoice = choice.toLowerCase()
                 //Check wether user input the valid choice
-                if (choice === "rock" || choice === "paper" || choice === "scissors" ){
+                if (lowerCaseChoice === "rock" || lowerCaseChoice === "paper" || lowerCaseChoice === "scissors" ){
                     //Return the valid choice if the user input is correct.
-                    let human = choice
+                    let human = lowerCaseChoice
                     return human
                     //Stop the while loop
                     condition = 0
@@ -53,6 +54,11 @@
                 }
             }
         }
+
+        //Function for playRound
+        //Call Function of getComputerChoice & getHumanChoice
+        //
+
         console.log(getComputerChoice(choices))
         console.log(getHumanChoice())
 
